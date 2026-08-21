@@ -71,6 +71,8 @@ Contains the webhook verification logic.
 
 Generates an HMAC-SHA256 signature for testing the webhook.
 
+![Generated Signature](./Signature-generated%20-%20Copy.png)
+
 [.gitignore](./.gitignore)
 
 Prevents sensitive or unnecessary files from being committed to the repository.
@@ -93,6 +95,8 @@ Missing signature
 
 The request was rejected.
 
+![Missing Signature](./Missing-signature.png)
+
 **Test 2 — Invalid Signature**
 
 A request was sent with an incorrect signature.
@@ -103,6 +107,8 @@ Invalid signature
 
 The request was rejected.
 
+![Invalid Signature](./Invalid-signature.png)
+
 **Test 3 — Valid Signature**
 
 A request was sent using the correctly generated HMAC-SHA256 signature.
@@ -112,6 +118,8 @@ Result:
 HTTP 200 OK
 
 The webhook was successfully verified.
+
+![Valid Signature](./Valid-signature.png)
 
 ### Running the Prototype Locally
 
