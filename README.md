@@ -59,31 +59,30 @@ Verification Flow
 
 Project Files
 
-"app.py"
-
+[app.py](./app.py)
 Runs the Flask application and provides the webhook endpoint.
 
-"webhook.py"
+[webhook.py](./webhook.py)
 
 Contains the webhook verification logic.
 
-"generate_signature.py"
+[generate_signature.py](./generate_signature.py)
 
 Generates an HMAC-SHA256 signature for testing the webhook.
 
-".gitignore"
+[.gitignore](./.gitignore)
 
 Prevents sensitive or unnecessary files from being committed to the repository.
 
-".env"
+**".env"**
 
 Stores the webhook secret as an environment variable. This file is intentionally excluded from GitHub for security reasons.
 
-Testing
+### Testing
 
 The prototype was tested using three main scenarios.
 
-Test 1 — Missing Signature
+**Test 1 — Missing Signature**
 
 A "POST" request was sent without the "X-Webhook-Signature" header.
 
@@ -93,7 +92,7 @@ Missing signature
 
 The request was rejected.
 
-Test 2 — Invalid Signature
+**Test 2 — Invalid Signature**
 
 A request was sent with an incorrect signature.
 
@@ -103,7 +102,7 @@ Invalid signature
 
 The request was rejected.
 
-Test 3 — Valid Signature
+**Test 3 — Valid Signature**
 
 A request was sent using the correctly generated HMAC-SHA256 signature.
 
@@ -113,7 +112,7 @@ HTTP 200 OK
 
 The webhook was successfully verified.
 
-Running the Prototype Locally
+### Running the Prototype Locally
 
 1. Install the required dependencies
 
@@ -141,13 +140,13 @@ http://127.0.0.1:5000/webhook
 
 Include the "X-Webhook-Signature" header when testing a valid request.
 
-Security Note
+### Security Note
 
 The webhook secret is stored locally in an environment variable rather than being hard-coded into the source code.
 
 The ".env" file is excluded through ".gitignore" so that the secret is not exposed in the public repository.
 
-Learning Outcome
+### Learning Outcome
 
 Through this prototype, I learned how webhook authentication works using HMAC-SHA256. I also gained practical experience with Flask, HTTP requests, environment variables, debugging, Git, GitHub, and GitHub authentication.
 
