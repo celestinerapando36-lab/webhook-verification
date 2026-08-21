@@ -1,3 +1,17 @@
+### Solo Recon
+
+### What I Learned
+
+For my Solo Recon, I chose to learn about **Webhook Verification using HMAC-SHA256**.
+
+I learned:
+- What webhooks are
+- How HTTP requests work
+- Why webhook verification is important
+- How HMAC-SHA256 signatures are generated
+- How a webhook request can be verified using a secret key
+- How to reject requests with invalid signatures
+  
 Webhook Verification Mini Prototype
 
 Project Overview
