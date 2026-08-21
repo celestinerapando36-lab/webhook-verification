@@ -12,15 +12,15 @@ I learned:
 - How a webhook request can be verified using a secret key
 - How to reject requests with invalid signatures
   
-Webhook Verification Mini Prototype
+### Webhook Verification Mini Prototype
 
-Project Overview
+### Project Overview
 
 This project is a mini-prototype demonstrating how webhook requests can be authenticated using HMAC-SHA256.
 
 The prototype was developed using Python and Flask. It receives a webhook request, checks the "X-Webhook-Signature" header, generates the expected HMAC-SHA256 signature using a secret key, and verifies whether the received signature is valid.
 
-Technologies Used
+**Technologies Used**
 
 - Python
 - Flask
@@ -30,7 +30,7 @@ Technologies Used
 - GitHub
 - Python environment variables
 
-How the Prototype Works
+### How the Prototype Works
 
 The verification process follows these steps:
 
@@ -41,7 +41,7 @@ The verification process follows these steps:
 5. The received signature is compared with the expected signature.
 6. The request is either accepted or rejected.
 
-Verification Flow
+### Verification Flow
 
 1.Receive Webhook: The Flask server receives an HTTP POST request at the /webhook endpoint.
              
@@ -57,9 +57,10 @@ Verification Flow
   - If the signature matches the webhook is verified and returns HTTP 200 OK.
   - If the signature is missing or does not match, then the request is rejected.
 
-Project Files
+### Project Files
 
 [app.py](./app.py)
+
 Runs the Flask application and provides the webhook endpoint.
 
 [webhook.py](./webhook.py)
